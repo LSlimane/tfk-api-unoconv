@@ -53,6 +53,8 @@ TIMEOUT_SERVER default is 2 minutes (120 000 milliseconds)
 
 TIMEOUT_SOCKET default is 2 minutes (120 000 milliseconds)
 
+UPLOADS_FOLDER default is ```~/uploads/```
+
 Change it in the Dockerfile or create an env-file and load it at containerstart
 
 ```bash
