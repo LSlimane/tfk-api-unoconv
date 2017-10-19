@@ -1,5 +1,6 @@
 'use strict'
 
+const config = require('../config')
 const fs = require('fs')
 const uuid = require('uuid')
 const unoconv = require('unoconv2')
@@ -13,7 +14,7 @@ module.exports.handleUpload = (request, reply) => {
     const nameArray = data.file.hapi.filename.split('.')
     const fileEndingOriginal = nameArray.pop()
     const temporaryName = uuid.v4()
-    const pathPre = process.cwd() + '/uploads/' + temporaryName
+    const pathPre = config.UPLOADS_FOLDER + temporaryName
     const fileNameTempOriginal = pathPre + '.' + fileEndingOriginal
     const file = fs.createWriteStream(fileNameTempOriginal)
 
