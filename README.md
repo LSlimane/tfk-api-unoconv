@@ -61,60 +61,60 @@ Change it in the Dockerfile or create an env-file and load it at containerstart
 $ docker run --env-file=docker.env -d -p 80:3000 --name unoconv-webservice unoconv-webservice
 ```
 
-#without docker 
+# Without docker 
 
-###Update package database
+### Update package database
 
     apt-get update
 
-###Upgrade
+### Upgrade
 
     apt-get upgrade
   
-###Install Nodejs : 
+### Install Nodejs : 
 https://www.digitalocean.com/community/tutorials/how-to-install-node-js-with-nvm-node-version-manager-on-a-vps
 
-###First install nvm
+### First install nvm
 
     curl https://raw.githubusercontent.com/creationix/nvm/v0.11.1/install.sh | bash
 
-###Update profil vars
+### Update profil vars
 
 source ~/.profile
 
-###Install git to be able to get node versions
+### Install git to be able to get node versions
 
     apt-get install git
 
-###Install node version 8.7.0
+### Install node version 8.7.0
 
     nvm install v8.7.0
 
-###Confirm version
+### Confirm version
 
     node --version
 
-###Confirm path
+### Confirm path
 
     which node
 
-###Install Nginx
+### Install Nginx
 
     apt-get install nginx
 
-###copy config files 
+### copy config files 
 
     cp bashrc ~/.bashrc
     cp nginx.default /etc/nginx/sites-enabled/default
     cp pdfconv.conf /etc/init/pdfconv.conf
     cp unoconv.conf /etc/init/unoconv.conf
 
-###install project dependencies
+### install project dependencies
 
     cd ../
     nmp install
 
-###Run services
+### Run services
 
     strat unoconv
     start pdfconv
