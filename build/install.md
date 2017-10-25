@@ -35,6 +35,10 @@ source ~/.profile
 
     which node
 
+###Install unoconv
+
+	apt-get install unoconv
+
 ###Install Nginx
 
     apt-get install nginx

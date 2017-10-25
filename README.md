@@ -102,6 +102,10 @@ source ~/.profile
 
     apt-get install nginx
 
+###Install unoconv
+
+	apt-get install unoconv
+	
 ### copy config files 
 
     cp bashrc ~/.bashrc
